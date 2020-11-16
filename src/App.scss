@@ -780,6 +780,8 @@
       }
     }
     .menu{
+      display: block !important;
+      z-index: 2;
       #menu-bar {
         z-index: 2;
         #menu-b {
@@ -816,7 +818,7 @@
           border-radius:2px;
           transition:all 0.5s;
           margin: 1px auto;
-          z-index: 900000;
+          z-index: 2;
         }
 
         #bar1 {
