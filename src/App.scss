@@ -36,8 +36,10 @@
       display: none;
     }
     .menu{
-      padding: 10px 0;
-      display: flex;
+      margin:10px 0;
+      display: flex !important;
+      height: 50px;
+      overflow: hidden;
       a{
         img{
           width: 70px;
@@ -854,7 +856,6 @@
           display: block !important;
         }
       }
-      position: relative;
       .dB{
         display: block;
       }
@@ -879,9 +880,9 @@
           }
         }
       }
-      a{
+      a{/* 
         display: flex;
-        z-index: 2;
+        z-index: 2; */
         img{
           width: 50px !important;
         }

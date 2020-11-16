@@ -19,7 +19,7 @@ import lightHino from './img/telas/light_hino.png';
 import Tela from './Components/Telas';
 import './App.scss';
 import Corousel from 'react-elastic-carousel';
-import {Link, animateScroll as scroll} from 'react-scroll';
+import {Link} from 'react-scroll';
 import TapToTop from './Components/TapToTop';
 import Download from './Components/Download';
 import Footer from './Components/Footer';
@@ -52,19 +52,18 @@ const handleClickBody =()=>{
   setMenu(!menu);
   document.querySelector('body').classList.remove('body');
 }
+
 useEffect(() => {
-    handleClick();
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => {
-        window.removeEventListener('scroll', handleScroll);
-    };
-    
-}, []);
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  window.removeEventListener('scroll', handleScroll);
+  setMenu(menu => !menu);
+ 
+},[]);
 
   return (
     <div className="App">
   
-    <section className="home">
+    <section id="home" className="home">
       <div className={menu===false ? "menu-ll": "menu-l"}>
         <img className="whiteM" src={phoneBlack} alt="Logo"/>
       </div>
@@ -79,11 +78,9 @@ useEffect(() => {
             </div>
           </div>
           <ul className={menu===false ? "dN":"dB"}>
-            <li onClick={()=>
-              scroll.scrollToTop()
-            }><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="telas">Home</Link></li>
+            <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="home">Home</Link></li>
             <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="telas">Telas do App</Link></li>
-            <li> <Link onClick={handleClickBody}  className="link" duration={1000} smooth={true} to="download">Download</Link></li>
+            <li><Link onClick={handleClickBody}  className="link" duration={1000} smooth={true} to="download">Download</Link></li>
             <div id="animacao" className="animacao s-home"></div>
             <p className="github">👨🏽‍💻 Aventure-se e contribua com o Projecto no <a href="https://github.com/moser-jose/Hina7" target="_blank" rel="noreferrer">GitHub</a> ✌🏼</p>
           </ul>
