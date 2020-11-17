@@ -2,20 +2,20 @@ import React, { useState, useEffect } from 'react';
 import logo from './img/logo.svg';
 import phoneWhite from './img/phone_white.svg';
 import phoneBlack from './img/phone_dark.svg';
-import darkHome from './img/telas/dark_home.png';
-import darkPreload from './img/telas/dark_preload.png';
-import darkCategorie from './img/telas/dark_seccoes.png';
-import darkConfig from './img/telas/dark_config.png';
-import darkSearch from './img/telas/dark_search.png';
-import darkfavorites from './img/telas/dark_favorites.png';
-import darkHino from './img/telas/dark_hino.png';
-import lightHome from './img/telas/light_home.png';
-import lightPreload from './img/telas/light_preload.png';
-import lightCategorie from './img/telas/light_seccoes.png';
-import lightConfig from './img/telas/light_config.png';
-import lightSearch from './img/telas/light_search.png';
-import lightfavorites from './img/telas/light_favorites.png';
-import lightHino from './img/telas/light_hino.png';
+import darkHome from './img/telas/dark_home.jpg';
+import darkPreload from './img/telas/dark_preload.jpg';
+import darkCategorie from './img/telas/dark_seccoes.jpg';
+import darkConfig from './img/telas/dark_config.jpg';
+import darkSearch from './img/telas/dark_search.jpg';
+import darkfavorites from './img/telas/dark_favorites.jpg';
+import darkHino from './img/telas/dark_hino.jpg';
+import lightHome from './img/telas/light_home.jpg';
+import lightPreload from './img/telas/light_preload.jpg';
+import lightCategorie from './img/telas/light_seccoes.jpg';
+import lightConfig from './img/telas/light_config.jpg';
+import lightSearch from './img/telas/light_search.jpg';
+import lightfavorites from './img/telas/light_favorites.jpg';
+import lightHino from './img/telas/light_hino.jpg';
 import Tela from './Components/Telas';
 import './App.scss';
 import Corousel from 'react-elastic-carousel';
@@ -55,9 +55,11 @@ const handleClickBody =()=>{
 
 useEffect(() => {
   window.addEventListener('scroll', handleScroll, { passive: true });
-  window.removeEventListener('scroll', handleScroll);
   setMenu(menu => !menu);
- 
+  return ()=>{
+    window.removeEventListener('scroll', handleScroll);
+  }
+  
 },[]);
 
   return (
@@ -118,8 +120,7 @@ useEffect(() => {
       <div className="container">
         <div className="tela-and-title">
               <h1>Telas do App</h1>
-              <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
-                  auctor nisi elit consequat ipsum, nec sagittis sem!</p>
+              <p>Veja as telas do App e desfrute do Aplicativo, louve a Deus e adore-o na sua plenitude.</p>
         </div>
           <div className="telas-phone">
             <Corousel disableArrowsOnEnd={false} pagination={false} transitionMs={500} breakPoints={breakPoints}>
@@ -143,7 +144,7 @@ useEffect(() => {
     </section>
     <Download phoneWhite={phoneWhite} phoneBlack={phoneBlack}></Download>
     {scrollPosition > 50 && <TapToTop></TapToTop>}
-    
+
     <Footer></Footer>
     
     </div>
