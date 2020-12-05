@@ -145,8 +145,24 @@ useEffect(() => {
     <Download phoneWhite={phoneWhite} phoneBlack={phoneBlack}></Download>
     {scrollPosition > 50 && <TapToTop></TapToTop>}
 
-    <Footer></Footer>
+    <footer>
+    <div className="prefooter container">
+            <p>👨🏽‍💻 Aventure-se e contribua com o Projecto no <a href="https://github.com/moser-jose/Hina7" target="_blank" rel="noreferrer">GitHub</a> ✌🏼</p>
+            
+        </div>
+        <div className="footer">
+            <div className="container">
+                <a href="/"><img src={logo} alt="Logo"/></a>
+                <ul className={menu===false ? "dN":"dB"}>
+                    <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="home">Home</Link></li>
+                    <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="telas">Telas do App</Link></li>
+                    <li><Link onClick={handleClickBody}  className="link" duration={1000} smooth={true} to="download">Download</Link></li>
+        </ul>
+        <p>Todos os Direitos Reservados &copy; 2020</p>
+            </div>
+        </div>
     
+    </footer>
     </div>
   );
 }
