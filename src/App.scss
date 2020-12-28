@@ -899,8 +899,10 @@
       }
       .dB{
         display: block;
+        padding-left: 0px !important;
       }
       .dN{
+        padding-left: 0;
         display: none !important;
       }
       
@@ -1131,7 +1133,12 @@
       }
     }
     .footer{
-      
+      ul{
+        padding-left: 0px !important;
+        li{
+          display: block !important;
+        }
+      }
     }
   }
 

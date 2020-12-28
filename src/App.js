@@ -99,7 +99,7 @@ useEffect(() => {
               <span className="goo"><i className="i fab fa-google-play"></i> GooglePlay</span>
             </div>
           </a>
-          <a href="#id" className="apk">
+          <a target="_blank" href="https://github.com/moser-jose/Hina7/releases/download/1.0.1/Hinario.apk" className="apk">
             <div className="link">
               <span className="goo"><i className="i fab fa-android"></i> Download APK</span>
             </div>
