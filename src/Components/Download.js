@@ -11,12 +11,12 @@ const download= ({phoneBlack, phoneWhite})=>
     <p className="texto">
     São mais de 600 hinos, que podem ser entoados não apenas no culto congregacional mas também no culto familiar, nas reuniões de jovens, na devoção particular e muito mais. Tira o maior proveito. Deus o abençoe.
     </p>
-    <a href="#id" className="play">
+    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.hin7" className="play">
       <div className="link">
         <span className="goo"><i className="i fab fa-google-play"></i> GooglePlay</span>
       </div>
     </a>
-    <a href="#id" className="apk">
+    <a target="_blank" href="https://github.com/moser-jose/Hina7/releases/tag/v1.0.2" className="apk">
       <div className="link">
         <span className="goo"><i className="i fab fa-android"></i> Download APK</span>
       </div>
