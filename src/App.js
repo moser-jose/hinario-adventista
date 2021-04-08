@@ -26,7 +26,7 @@ import Footer from './Components/Footer';
 export default function App() {
   const [menu, setMenu] = useState(true);
   const breakPoints = [
-    { width: 1, itemsToShow: 1 },
+    { width: 1, itemsToShow: 2 },
     { width: 500, itemsToShow: 2 },
     { width: 1200, itemsToShow: 5 }
   ];
@@ -93,11 +93,11 @@ export default function App() {
             <p className="texto">
               São mais de 600 hinos, que podem ser entoados não apenas no culto congregacional mas também no culto familiar, nas reuniões de jovens, na devoção particular e muito mais. Tira o maior proveito. Deus o abençoe.
           </p>
-            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.hin7" className="play">
+            {/* <a target="_blank" href="https://play.google.com/store/apps/details?id=com.hin7" className="play">
               <div className="link">
                 <span className="goo"><i className="i fab fa-google-play"></i> GooglePlay</span>
               </div>
-            </a>
+            </a> */}
             <a target="_blank" href="https://github.com/moser-jose/Hina7/releases/tag/v1.0.6" className="apk">
               <div className="link">
                 <span className="goo"><i className="i fab fa-android"></i> Download APK</span>
