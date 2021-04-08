@@ -21,9 +21,6 @@ const download= ({phoneBlack, phoneWhite})=>
         <span className="goo"><i className="i fab fa-android"></i> Download APK</span>
       </div>
     </a>
-    <p className="obs">
-      <span>Obs:</span> Brevemente na App Store
-    </p>
   </div>
   <img className="black" src={phoneBlack} alt="Logo"/>
   <img className="white" src={phoneWhite} alt="Logo"/>

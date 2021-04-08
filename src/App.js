@@ -19,109 +19,104 @@ import lightHino from './img/telas/light_hino.jpg';
 import Tela from './Components/Telas';
 import './App.scss';
 import Corousel from 'react-elastic-carousel';
-import {Link} from 'react-scroll';
+import { Link } from 'react-scroll';
 import TapToTop from './Components/TapToTop';
 import Download from './Components/Download';
 import Footer from './Components/Footer';
 export default function App() {
-  const [menu, setMenu]=useState(true);
-  const breakPoints=[
-    {width:1, itemsToShow:1},
-    {width:500, itemsToShow:2},
-    {width:768, itemsToShow:3},
-    {width:1200, itemsToShow:5}
+  const [menu, setMenu] = useState(true);
+  const breakPoints = [
+    { width: 1, itemsToShow: 1 },
+    { width: 500, itemsToShow: 2 },
+    { width: 1200, itemsToShow: 5 }
   ];
 
-const [scrollPosition, setScrollPosition] = useState(0);
-const handleScroll = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
-};
+  };
 
-const handleClick =()=>{
-      setMenu(!menu);
-      if(!menu){
-        document.querySelector('body').classList.add('body');
-      }
-      else{
-        document.querySelector('body').classList.remove('body');
-      }
-}
-
-const handleClickBody =()=>{
-  setMenu(!menu);
-  document.querySelector('body').classList.remove('body');
-}
-
-useEffect(() => {
-  window.addEventListener('scroll', handleScroll, { passive: true });
-  setMenu(menu => !menu);
-  return ()=>{
-    window.removeEventListener('scroll', handleScroll);
+  const handleClick = () => {
+    setMenu(!menu);
+    if (!menu) {
+      document.querySelector('body').classList.add('body');
+    }
+    else {
+      document.querySelector('body').classList.remove('body');
+    }
   }
-  
-},[]);
+
+  const handleClickBody = () => {
+    setMenu(!menu);
+    document.querySelector('body').classList.remove('body');
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    setMenu(menu => !menu);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+
+  }, []);
 
   return (
     <div className="App">
-  
-    <section id="home" className="home">
-      <div className={menu===false ? "menu-ll": "menu-l"}>
-        <img className="whiteM" src={phoneBlack} alt="Logo"/>
-      </div>
+
+      <section id="home" className="home">
+        <div className={menu === false ? "menu-ll" : "menu-l"}>
+          <img className="whiteM" src={phoneBlack} alt="Logo" />
+        </div>
         <div className="container">
-        <div className="menu container">
-          <a href="/"><img src={logo} alt="Logo"/></a>
-          <div id="menu-bar" onClick={handleClick}>
-            <div id="menu-b" className={menu===true ? "change": ""}>
-                  <div id={menu===false ? "bar1": "bar11"} className="bar"></div>
-                  <div id="bar2" className="bar"></div>
-                  <div id={menu===false ? "bar3": "bar33"} className="bar"></div>
+          <div className="menu container">
+            <a href="/"><img src={logo} alt="Logo" /></a>
+            <div id="menu-bar" onClick={handleClick}>
+              <div id="menu-b" className={menu === true ? "change" : ""}>
+                <div id={menu === false ? "bar1" : "bar11"} className="bar"></div>
+                <div id="bar2" className="bar"></div>
+                <div id={menu === false ? "bar3" : "bar33"} className="bar"></div>
+              </div>
             </div>
+            <ul className={menu === false ? "dN" : "dB"}>
+              <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="home">Home</Link></li>
+              <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="telas">Telas do App</Link></li>
+              <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="download">Download</Link></li>
+              <div id="animacao" className="animacao s-home"></div>
+              <p className="github">👨🏽‍💻 Aventure-se e contribua com o Projecto no <a href="https://github.com/moser-jose/Hina7" target="_blank" rel="noreferrer">GitHub</a> ✌🏼</p>
+            </ul>
           </div>
-          <ul className={menu===false ? "dN":"dB"}>
-            <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="home">Home</Link></li>
-            <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="telas">Telas do App</Link></li>
-            <li><Link onClick={handleClickBody}  className="link" duration={1000} smooth={true} to="download">Download</Link></li>
-            <div id="animacao" className="animacao s-home"></div>
-            <p className="github">👨🏽‍💻 Aventure-se e contribua com o Projecto no <a href="https://github.com/moser-jose/Hina7" target="_blank" rel="noreferrer">GitHub</a> ✌🏼</p>
-          </ul>
-        </div>
           <div className="info grid-8">
-          <h1>
-            Faça o Download do Hinário Adventista do 7º dia
+            <h1>
+              Faça o Download do Hinário Adventista do 7º dia
           </h1>
-          <p className="texto">
-          São mais de 600 hinos, que podem ser entoados não apenas no culto congregacional mas também no culto familiar, nas reuniões de jovens, na devoção particular e muito mais. Tira o maior proveito. Deus o abençoe.
+            <p className="texto">
+              São mais de 600 hinos, que podem ser entoados não apenas no culto congregacional mas também no culto familiar, nas reuniões de jovens, na devoção particular e muito mais. Tira o maior proveito. Deus o abençoe.
           </p>
-          <a target="_blank" href="https://play.google.com/store/apps/details?id=com.hin7" className="play">
-            <div className="link">
-              <span className="goo"><i className="i fab fa-google-play"></i> GooglePlay</span>
-            </div>
-          </a>
-          <a target="_blank" href="https://github.com/moser-jose/Hina7/releases/tag/v1.0.6" className="apk">
-            <div className="link">
-              <span className="goo"><i className="i fab fa-android"></i> Download APK</span>
-            </div>
-          </a>
-          
-          <p className="obs">
-            <span>Obs:</span> Brevemente na App Store
-          </p>
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.hin7" className="play">
+              <div className="link">
+                <span className="goo"><i className="i fab fa-google-play"></i> GooglePlay</span>
+              </div>
+            </a>
+            <a target="_blank" href="https://github.com/moser-jose/Hina7/releases/tag/v1.0.6" className="apk">
+              <div className="link">
+                <span className="goo"><i className="i fab fa-android"></i> Download APK</span>
+              </div>
+            </a>
+          </div>
+
         </div>
-        
-        </div>
-        
-        <img className="white" src={phoneWhite} alt="Logo"/>
-        <img className="black" src={phoneBlack} alt="Logo"/>
+
+        <img className="white" src={phoneWhite} alt="Logo" />
+        <img className="black" src={phoneBlack} alt="Logo" />
         <div className="fim"></div>
       </section>
-    <section id="telas" className="telas">
-      <div className="container">
-        <div className="tela-and-title">
-              <h1>Telas do App</h1>
-              <p>Veja as telas do App e desfrute do Aplicativo, louve a Deus e adore-o na sua plenitude.</p>
-        </div>
+      <section id="telas" className="telas">
+        <div className="container">
+          <div className="tela-and-title">
+            <h1>Telas do App</h1>
+            <p>Veja as telas do App e desfrute do Aplicativo, louve a Deus e adore-o na sua plenitude.</p>
+          </div>
           <div className="telas-phone">
             <Corousel disableArrowsOnEnd={false} pagination={false} transitionMs={500} breakPoints={breakPoints}>
               <Tela imagem={darkPreload}></Tela>
@@ -140,29 +135,29 @@ useEffect(() => {
               <Tela imagem={lightfavorites}></Tela>
             </Corousel>
           </div>
-      </div>
-    </section>
-    <Download phoneWhite={phoneWhite} phoneBlack={phoneBlack}></Download>
-    {scrollPosition > 50 && <TapToTop></TapToTop>}
+        </div>
+      </section>
+      <Download phoneWhite={phoneWhite} phoneBlack={phoneBlack}></Download>
+      {scrollPosition > 50 && <TapToTop></TapToTop>}
 
-    <footer>
-    <div className="prefooter container">
-            <p>👨🏽‍💻 Aventure-se e contribua com o Projecto no <a href="https://github.com/moser-jose/Hina7" target="_blank" rel="noreferrer">GitHub</a> ✌🏼</p>
-            
+      <footer>
+        <div className="prefooter container">
+          <p>👨🏽‍💻 Aventure-se e contribua com o Projecto no <a href="https://github.com/moser-jose/Hina7" target="_blank" rel="noreferrer">GitHub</a> ✌🏼</p>
+
         </div>
         <div className="footer">
-            <div className="container">
-                <a href="/"><img src={logo} alt="Logo"/></a>
-                <ul className={menu===false ? "dN":"dB"}>
-                    <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="home">Home</Link></li>
-                    <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="telas">Telas do App</Link></li>
-                    <li><Link onClick={handleClickBody}  className="link" duration={1000} smooth={true} to="download">Download</Link></li>
-        </ul>
-        <p>Todos os Direitos Reservados &copy; 2020</p>
-            </div>
+          <div className="container">
+            <a href="/"><img src={logo} alt="Logo" /></a>
+            <ul className={menu === false ? "dN" : "dB"}>
+              <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="home">Home</Link></li>
+              <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="telas">Telas do App</Link></li>
+              <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="download">Download</Link></li>
+            </ul>
+            <p>Todos os Direitos Reservados &copy; {new Date().getFullYear()}</p>
+          </div>
         </div>
-    
-    </footer>
+
+      </footer>
     </div>
   );
 }
