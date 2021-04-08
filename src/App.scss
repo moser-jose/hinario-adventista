@@ -339,21 +339,25 @@
 
       }
       
-      .bTybGL,.jAmbxV{
+      .rec-arrow-left,
+      .rec-arrow-right{
+        background-color: #29C17E !important;
+        width: 30px !important;
+        min-width: 30px !important;
+        height: 30px !important;
+        font-size: 18px;
         border-radius: 2px !important;
-        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
-        background-color: #29C17E;
+        z-index: 1000;
         color: #fff;
-        font-size: 1.4em;
-        border: none;
-        width: 40px;
-        height: 40px;
-        min-width: 40px;
-        line-height: 40px;
-
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border:none !important;
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
         &:hover{
-          background-color: #29c17fcc;
-        }
+            background-color: #29C17E !important;
+           
+          }
       }
 
     }
@@ -1090,35 +1094,33 @@
         }
       }
 
-      .bTybGL, .jAmbxV{
-        border-radius: 2px;
-        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
-        background-color: #29C17E;
+      .rec-arrow-left,
+      .rec-arrow-right{
+        background-color: #29C17E !important;
+        width: 30px !important;
+        min-width: 30px !important;
+        height: 30px !important;
+        font-size: 18px;
+        border-radius: 2px !important;
+        z-index: 1000;
         color: #fff;
-        font-size: 1.1em;
-        border: none;
-        width: 40px !important;
-        height: 40px;
-        min-width: 40px !important;
-        position: absolute !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border:none !important;
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
         &:hover{
-          background-color: #29c17fcc;
-        }
+            background-color: #29C17E !important;
+           
+          }
       }
-
       .rec-arrow-left{
        left: 0;
-       
-       z-index: 1000;
-       background-color: #29C17E;
       }
-
       .rec-arrow-right{
        right: 0;
-       
-       z-index: 1000;
-       background-color: #29C17E;
       }
+
     }
   }
 
