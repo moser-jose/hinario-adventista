@@ -153,7 +153,7 @@ export default function App() {
               <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="telas">Telas do App</Link></li>
               <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="download">Download</Link></li>
             </ul>
-            <p>Todos os Direitos Reservados &copy; {new Date().getFullYear()}</p>
+            <p>Alguns Direitos Reservados &copy; {new Date().getFullYear()}</p>
           </div>
         </div>
 
