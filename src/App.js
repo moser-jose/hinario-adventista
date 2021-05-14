@@ -26,9 +26,9 @@ import Footer from './Components/Footer';
 export default function App() {
   const [menu, setMenu] = useState(true);
   const breakPoints = [
-    { width: 1, itemsToShow: 2 },
-    { width: 500, itemsToShow: 2 },
-    { width: 1200, itemsToShow: 5 }
+    { width: 1, itemsToShow: 1 },
+    { width: 550, itemsToShow: 3 },
+    { width: 1000, itemsToShow: 5 },
   ];
 
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -153,7 +153,7 @@ export default function App() {
               <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="telas">Telas do App</Link></li>
               <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="download">Download</Link></li>
             </ul>
-            <p>Alguns Direitos Reservados &copy; {new Date().getFullYear()}</p>
+            <p>Alguns direitos reservados &copy; {new Date().getFullYear()}</p>
           </div>
         </div>
 
