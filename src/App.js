@@ -22,7 +22,7 @@ import Corousel from 'react-elastic-carousel';
 import { Link } from 'react-scroll';
 import TapToTop from './Components/TapToTop';
 import Download from './Components/Download';
-import Footer from './Components/Footer';
+import Novo from './Components/Novo';
 export default function App() {
   const [menu, setMenu] = useState(true);
   const breakPoints = [
@@ -81,8 +81,8 @@ export default function App() {
             <ul className={menu === false ? "dN" : "dB"}>
               <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="home">Home</Link></li>
               <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="telas">Telas do App</Link></li>
+              <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="novo">Novidades</Link></li>
               <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="download">Download</Link></li>
-              <div id="animacao" className="animacao s-home"></div>
               <p className="github">👨🏽‍💻 Aventure-se e contribua com o Projecto no <a href="https://github.com/moser-jose/Hina7" target="_blank" rel="noreferrer">GitHub</a> ✌🏼</p>
             </ul>
           </div>
@@ -98,11 +98,13 @@ export default function App() {
                 <span className="goo"><i className="i fab fa-google-play"></i> GooglePlay</span>
               </div>
             </a> */}
-            <a target="_blank" href="https://github.com/moser-jose/Hina7/releases/tag/v1.0.7" className="apk">
+            <a target="_blank" href="https://github.com/moser-jose/Hina7/releases/tag/v1.0.8" className="apk">
               <div className="link">
                 <span className="goo"><i className="i fab fa-android"></i> Download APK</span>
               </div>
             </a>
+            <Link duration={1000} smooth={true} to='novo' className="vers">Versão atual v1.0.8</Link>
+  
           </div>
 
         </div>
@@ -137,7 +139,9 @@ export default function App() {
           </div>
         </div>
       </section>
+      <Novo phoneBlack={phoneBlack}/>
       <Download phoneWhite={phoneWhite} phoneBlack={phoneBlack}></Download>
+      
       {scrollPosition > 50 && <TapToTop></TapToTop>}
 
       <footer>
@@ -151,6 +155,7 @@ export default function App() {
             <ul className={menu === false ? "dN" : "dB"}>
               <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="home">Home</Link></li>
               <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="telas">Telas do App</Link></li>
+              <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="novo">Novidades</Link></li>
               <li><Link onClick={handleClickBody} className="link" duration={1000} smooth={true} to="download">Download</Link></li>
             </ul>
             <p>Alguns direitos reservados &copy; {new Date().getFullYear()}</p>

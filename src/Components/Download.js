@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 
 const download= ({phoneBlack, phoneWhite})=>
 
@@ -16,11 +17,12 @@ const download= ({phoneBlack, phoneWhite})=>
         <span className="goo"><i className="i fab fa-google-play"></i> GooglePlay</span>
       </div>
     </a> */}
-    <a target="_blank" href="https://github.com/moser-jose/Hina7/releases/tag/v1.0.7" className="apk">
+    <a target="_blank" href="https://github.com/moser-jose/Hina7/releases/tag/v1.0.8" className="apk">
       <div className="link">
         <span className="goo"><i className="i fab fa-android"></i> Download APK</span>
       </div>
     </a>
+    <Link duration={1000} smooth={true} to='novo' className="vers">Versão atual v1.0.8</Link>
   </div>
   <img className="black" src={phoneBlack} alt="Logo"/>
   <img className="white" src={phoneWhite} alt="Logo"/>
