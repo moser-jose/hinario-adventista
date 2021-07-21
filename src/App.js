@@ -98,7 +98,7 @@ export default function App() {
                 <span className="goo"><i className="i fab fa-google-play"></i> GooglePlay</span>
               </div>
             </a> */}
-            <a target="_blank" href="https://github.com/moser-jose/Hina7/releases/tag/v1.0.8" className="apk">
+            <a target="_blank" rel="noreferrer" href="https://github.com/moser-jose/Hina7/releases/download/v1.0.8/hinario-v1.0.8.apk" className="apk">
               <div className="link">
                 <span className="goo"><i className="i fab fa-android"></i> Download APK</span>
               </div>
