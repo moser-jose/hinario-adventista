@@ -6,14 +6,12 @@ function Novo({phoneBlack}) {
             <div className="container">
                 <div className="versao">
                     <h1>O que há de novo</h1>
-                    <h2>v1.0.8</h2>
+                    <h2>v1.0.9</h2>
                     <ul>
-                        <li>Correções no hino 316 (retirada a última estrofe, não fazia parte do hino). 📃</li>
-                        <li>Melhoria na compatibilidade de app com dispositivos menos recente. 📱</li>
-                        <li>Melhoria nas secções e subsecções do app. ✅📲</li>
-                        <li>Correção de alguns bugs nos favoritos. ✅📲</li>
-                        <li>Retirado o botão Feedback. 👍🏻</li>
-                        <li>Agora já se pesquisa pela letra do Hino. 🔍📃</li>
+                        <li>Correções nos hinos 17, 126, 152, 282. 📃</li>
+                        <li>Mudança do teclado (Busca por número) para o teclado numérico. ⌨️</li>
+                        <li>Já é possível saber se existe uma nova versão do app. 🔍📃</li>
+                        <li>Melhoria na busca dos hinos. 🔍📃</li>
                     </ul>
                     <a target="_blank" rel="noreferrer" href="https://github.com/moser-jose/Hina7/blob/main/CHANGELOG.MD">Saiba mais no GitHub ✌🏼</a>
                 </div>
